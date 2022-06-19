@@ -1,20 +1,20 @@
-/* Repeat till the Player reaches the winning position 100.
-- Note In case the player position moves below 0,
-then the player restarts from 0  */
+/* Ensure the player gets
+to exact winning
+position 100.  */
 
 package com.snakeandladder;
 public class SnakeAndLadder {
     final static int source = 0;
     final  static  int destination = 100;
-
     public static void main(String[] args) {
-        int position=0, diceRoll=0;
-        while(position != destination)
-        {
+
+        int position = 0, diceRoll = 0;
+
+        while (position != destination) {
             diceRoll++;
-            int  randomCheck = (int) Math.floor(Math.random() * 10) % 6+1;
-            int  randomCheck2 = (int) (Math.random() * 10) % 3;
-            switch(randomCheck2) {
+            int randomCheck = (int) Math.floor(Math.random() * 10) % 6 + 1;
+            int randomCheck2 = (int) (Math.random() * 10) % 3;
+            switch (randomCheck2) {
                 case 0:
                     System.out.println("No play");
                     position += 0;
@@ -41,8 +41,6 @@ public class SnakeAndLadder {
             }
         }
         System.out.println("You won");
-
-
     }
     }
 
